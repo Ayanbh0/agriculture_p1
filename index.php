@@ -34,26 +34,26 @@ if(!isset($_SESSION["user"])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- css for index.html -->
-    <link rel="stylesheet" href="../HOME/style.css">
+    <link rel="stylesheet" href="./HOME/style.css">
 
 </head>
 
 <body>
     <!-- header section -->
     <header class="header">
-        <a href="../HOME/home.php" title="website logo" class="logo"><img class="web_lg" src="../image/website_logo.png"
+        <a href="./HOME/home.php" title="website logo" class="logo"><img class="web_lg" src="./image/website_logo.png"
                 alt="error to load"></a>
 
         <!-- navbar section -->
         <nav class="navbar">
-            <a href="../HOME/home.php">Home</a>
-            <a href="../ABOUT/about.php">About</a>
-            <a href="../SERVICE/service.php">Service</a>
-            <a href="../CROPS/crops.php">Crops</a>
-            <a href="../FERTILIZER/fertilizer.php">Fertilizer</a>
-            <a href="../LAWS/laws.php">Laws/Rules</a>
-            <a href="../REVIEWS/reviews.php">Reviews</a>
-            <a href="../CONTACT/contact.php">Contact Us</a>
+            <a href="./HOME/home.php">Home</a>
+            <a href="./ABOUT/about.php">About</a>
+            <a href="./SERVICE/service.php">Service</a>
+            <a href="./CROPS/crops.php">Crops</a>
+            <a href="./FERTILIZER/fertilizer.php">Fertilizer</a>
+            <a href="./LAWS/laws.php">Laws/Rules</a>
+            <a href="./REVIEWS/reviews.php">Reviews</a>
+            <a href="./CONTACT/contact.php">Contact Us</a>
         </nav>
 
         <!-- navbar icon section -->
