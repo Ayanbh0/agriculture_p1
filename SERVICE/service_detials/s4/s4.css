@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(56, 53, 53);
+    color: white;
+}
+
+.cr h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    border: 4px groove white;
+    border-radius: 15px;
+    padding: .5rem;
+    background-color: rgb(165, 101, 101);
+    color: wheat;
+    width: 50rem;
+    margin: auto;
+}
+
+.cr img{
+    height: 20rem;
+    width: 25rem;
+    border: 4px groove rgb(255, 217, 0);
+    border-radius: 15px;
+    text-align: center;
+    margin: 3rem auto;
+    display: block;
+}
+
+h1{
+    border: 4px groove rgb(255, 217, 0);
+    border-radius: 20px;
+    background-color: rgb(192, 114, 83);
+    width: 50rem;
+    margin: auto;
+    padding: .5rem;
+    text-align: center;
+}
+
+b{
+    color: greenyellow;
+}
+
+
+p{
+    padding: .5rem 3rem;
+    font-size: 35px;
+}
+
+.bt {
+    text-align: center;
+    margin: 2rem auto;
+    display: block;
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border: 0px solid;
+    border-style: groove;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    background: darkgreen;
+    width: 35rem;
+}
+
+.bt:hover {
+    font-size: 1.8rem;
+    color: darkgreen;
+    background: white;
+    border: none;
+}
