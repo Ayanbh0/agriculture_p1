@@ -1,0 +1,535 @@
+/* 
+1. 'px' means just variable length of content.
+2. 'em' means how many px declared in parent em act on that basis.
+3. 'rem' means how many px defines in root or html act on that basis and also act upon browser settings. 
+*/
+
+
+
+/* for font style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* global variable which is apply in all web-application.  */
+:root {
+    --green: rgb(133, 237, 30);
+    --black: rgb(35, 33, 33);
+    --light-color: #688234;
+    --box-shadow: 0 .2rem 1rem rgb(50, 49, 49);
+    --border: 1rem solid rgba(50, 49, 49);
+    --box-shadow: .1rem solid rgba(50, 49, 49);
+
+}
+
+/* design for all web page */
+* {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: weight;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+
+body {
+    background: rgb(163, 227, 163);
+}
+
+/* header, logo and icon section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /*for make display: flexible*/
+    align-items: center;
+    justify-content: space-between;
+    padding: .9rem 7%;
+    /*padding use for provide space to navbar 1.5rem from top and 8% from left and right */
+    background: #fff;
+    /* box-shadow: var(--box-shadow); call the global  variable which declare in root */
+    box-shadow: 0 .1rem 1rem rgb(50, 49, 49);
+    z-index: 1000;
+}
+
+.header .logo {
+    font-weight: bolder;
+}
+
+.web_lg {
+    height: 65px;
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    border-style: groove;
+}
+
+/* krishi culture word style block */
+/* .header span{
+    color: rgb(5, 70, 5);
+    font-size: 2.5rem;
+    margin-left: .3rem;
+    
+} */
+
+.header .navbar a {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0 .8rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: rgb(101, 208, 172);
+    text-decoration: wavy underline;
+}
+
+.header .icons div {
+    height: 4.2rem;
+    width: 4.2rem;
+    border: 1px solid;
+    line-height: 4.2rem;
+    border-radius: .5rem;
+    background: #e8e6e6;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .4rem;
+    text-align: center;
+    border: none;
+}
+
+.header .icons div:hover {
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+}
+
+.header .icons .fa-sign-out:hover{
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* header, logo and icon section */
+
+
+/* search-from section */
+.header .search-form {
+    position: absolute;
+    border: 0px solid;
+    top: 125%;
+    right: -110%;
+    width: 40rem;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 .05rem 1rem rgb(50, 49, 49);
+
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: no-repeat;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+/* search-from section */
+
+
+/* cart section */
+.header .shopping-cart {
+    position: absolute;
+    top: 125%;
+    right: -110%;
+    padding: 1rem;
+    border: 0px solid;
+    border-radius: 10px;
+    box-shadow: 0 .05rem 1rem rgb(50, 49, 49);
+    width: 30rem;
+    background: #fff;
+}
+
+.header .shopping-cart.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box {
+    border: 0px solid gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem;
+}
+
+.img {
+    height: 8rem;
+    width: 8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .5rem;
+    border-radius: 10px;
+}
+
+.header .shopping-cart .fa-trash {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: firebrick;
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .fa-trash:hover {
+    color: darkgreen;
+}
+
+.header .shopping-cart .box .content h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+
+.header .shopping-cart .box .content span {
+    color: #654f4f;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+}
+
+.header .shopping-cart .box .content .quantity {
+    padding-left: 1rem;
+    color: #654f4f;
+}
+
+.header .shopping-cart .total {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+
+.btn-1 {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    border: 0px solid;
+    border-style: groove;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    background: darkgreen;
+}
+
+.btn-1:hover {
+    font-size: 1.8rem;
+    color: darkgreen;
+    background: white;
+    border: 2px solid darkgreen;
+}
+
+.header .shopping-cart .btn-1 {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* cart section */
+
+
+
+
+/* banner section */
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    /* background: url(/image/banner_1.png); */
+    clip-path: circle(110% at 50% -50%);
+    background-position: center;
+    background-size: cover;
+    margin-top: 5rem;
+    padding-top: 8rem;
+    height: 70rem;
+    padding-bottom: 15rem;
+    animation: change 20s infinite ease-in-out;
+}
+
+@keyframes change {
+    0% {
+        background-image: url("../image/banner_1.png");
+    }
+
+    20% {
+        background-image: url("../image/change_1.png");
+    }
+
+    40% {
+        background-image: url("../image/change_3.png");
+    }
+
+    60% {
+        background-image: url("../image/change_4.png");
+    }
+
+    80% {
+        background-image: url("../image/change_5.png");
+    }
+
+    100% {
+        background-image: url("../image/change_6.png");
+    }
+}
+
+.home .content {
+    position: relative;
+    z-index: 1;
+    padding-top: 1.5rem;
+    height: 45rem;
+    text-align: center;
+    backdrop-filter: blur(9px);
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgba(27, 26, 26, 0.4);
+}
+
+.home .content h3 {
+    color: lavenderblush;
+    font-size: 4rem;
+    text-shadow: 0px 0px 10px rgb(34, 32, 32),0px 0px 10px rgb(34, 32, 32),0px 0px 10px rgb(34, 32, 32),0px 0px 10px rgb(34, 32, 32);
+}
+
+.btn-2 {
+    margin-top: .5rem;
+    display: inline-block;
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    border: 0px solid;
+    border-style: groove;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    background: darkgreen;
+}
+
+.btn-2:hover {
+    font-size: 1.8rem;
+    color: darkgreen;
+    background: white;
+    border: none;
+}
+
+.home .content h3 span {
+    color: navy;
+    text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white;
+
+}
+
+.fa-hand-o-right {
+    margin-left: 1rem;
+}
+
+.home .content p {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1.5rem 1rem;
+    line-height: 2.5rem;
+}
+
+/* banner section */
+
+
+
+/* dialogue secton */
+.dialogue {
+    padding-top: 10rem;
+}
+
+.dialogue .dg {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.dialogue .auth {
+    margin-top: 3rem;
+    text-align: right;
+    color: maroon;
+    font-weight: 600;
+
+}
+
+/* dialogue secton */
+
+
+
+/* footer section */
+.footer {
+    background-color: white;
+    margin-top: 10rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 2.2rem;
+}
+
+
+.d-btn {
+    text-align: center;
+    padding: auto;
+}
+
+.footer .box-container .box .web_lg {
+    /* margin-left: 6.3rem; */
+    height: 10rem;
+    width: 10rem;
+    box-shadow: none;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: black;
+    padding: 1.5rem 0;
+}
+
+.footer .box-container .box .links {
+    font-size: 1.5rem;
+    display: block;
+    color: var(--black);
+    padding: .2rem 0;
+}
+
+.footer .box-container .box .links:hover {
+    color: blue;
+}
+
+.footer .box-container .box .links i {
+    color: darkgreen;
+    padding-right: 1rem;
+}
+
+
+.footer .box-container .box .links:hover i {
+    padding-right: 3rem;
+}
+
+
+.footer .box-container .box .media a {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 5px;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-right: 1rem;
+    background: #e8e6e6;
+    text-align: center;
+}
+
+.footer .box-container .box .media a:hover {
+    background: var(--green);
+    color: white;
+}
+
+
+
+.footer .box-container .box p {
+
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    font-weight: 400;
+    color: var(--black);
+    padding: 1.5rem 0;
+    margin-bottom: .5rem;
+    text-align: start;
+
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    border-top: 6px solid #c1c0c0;
+    ;
+}
+
+.footer .copyright span {
+    color: darkgreen;
+    font-weight: 600;
+}
+
+/* footer section */
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media(max-width: 991px) {
+    html {
+        font-size: 5%;
+    }
+}
+
+@media(max-width: 450px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+/* responsive */
